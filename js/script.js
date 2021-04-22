@@ -3,8 +3,11 @@ var app = new Vue (
         el: '#root',
 
         data:{
+            userText: '',
+            userMessage: '',
             currentName:'',
             currentUserImg: '',
+            currentMessage: '',
 
             //array di contatti
              contacts: [
@@ -105,11 +108,19 @@ var app = new Vue (
 
         methods:{
             chooseUser(index){
-                console.log(index);
+                //console.log(index);
                 
                 const indexCurrent = this.contacts[index] ;
                 this.currentName = this.contacts[index].name;
                 this.currentUserImg = this.contacts[index].userImg;
+                this.currentMessage = this.contacts[index].messages;
+                this.currentMessage = this.currentMessage[index].text;
+
+            },
+
+            addText(){
+                this.userText.push(userMessage);
+                //non deve essere un array no push
                 
             }
 

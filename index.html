@@ -121,9 +121,11 @@
                 <!--fine title-box-->
 
                 <div class="chat">
-                    <div class="white boxes"></div>
+                    <!--white boxes-->
+                    <div class="white boxes">{{currentMessage}} </div>
 
-                    <div class="green boxes">green</div>
+                     <!--green boxes-->
+                    <div class="green boxes">{{userMessage}} </div>
                 </div>
 
                 <div class="text-area">
@@ -131,7 +133,7 @@
                         <i class="far fa-smile"></i>
                     </span>
                     
-                    <input class="input-chat" type="text" placeholder="Scrivi un messaggio">
+                    <input @keyup.enter="addText" v-model="userText" class="input-chat" type="text" placeholder="Scrivi un messaggio">
 
                     <span class="icons">
                         <i class="fas fa-microphone"></i>
