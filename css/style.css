@@ -12,6 +12,7 @@
     background-color: lightgray;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 img{
@@ -52,7 +53,6 @@ img{
 }
 
 .chat-box{
-   
     background-color: coral;
     width: 70%;
 }
@@ -91,7 +91,6 @@ img{
     color:#81c9d6 ;
     border-radius: 50%;
     height: 100%;
-    vertical-align: ;
 }
 
 .notify-box a{
@@ -112,5 +111,16 @@ img{
 
 /*box-list*/
 .user-list{
-    list-style-type: none;
+    list-style-type: none; 
+}
+
+.user-list li{
+    height: 60px;
+}
+
+.user-list img{
+
+    border-radius: 50%;
+    padding: 5px;
+
 }

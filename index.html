@@ -32,7 +32,7 @@
                     <!--user-->
                     <div class="user">
                         <img src="img/avatar_io.jpg" alt="io">
-                        <span class="inline">Nome utente</span>
+                        <span class="inline">Nicoletta</span>
                     </div>
 
                     <!--icons-->
@@ -52,6 +52,7 @@
 
                     
                 </div>
+                <!--fine title-box-->
 
                 <!--notify-box-->
                 <div class="notify-box">
@@ -76,7 +77,7 @@
                 <div class="box-list">
                     <ul class="user-list">
                         <li v-for="(contact, index) in contacts ">
-                            <img src="" alt="">
+                            <img :src=contact.userImg alt="">
                             <span class="inline">{{contact.name}} </span>
                         </li>
                     </ul>
@@ -89,9 +90,35 @@
             <!--chat-box-->
             <div class="chat-box ">
 
+                <!--title-box-->
                 <div class="title-box">
+
+                    <!--user-->
+                    <div class="user">
+
+                        <img src="img/avatar_io.jpg" alt="io">
+                        <span class="inline">Nicoletta</span> 
+                        
+                    </div>
+
+                    <!--icons-->
+                    <div class="icons">
+                        <span >
+                            <i class="fas fa-search"></i>
+                        </span>
+
+                        <span>
+                            <i class="fas fa-paperclip"></i>
+                        </span>
+
+                        <span >
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                    </div>
+
                     
                 </div>
+                <!--fine title-box-->
 
             </div>
             <!--fine chat-box-->
