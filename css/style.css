@@ -1,0 +1,116 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*general*/
+
+.title-box{
+    height: 10%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+    height: 100%;
+}
+
+/*wrapper*/
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: lightgray;
+    position: relative;
+}
+
+.wrapper-top{
+    height: 15%;
+    background-color: #378c73;
+}
+
+/*container app*/
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 95%;
+    display: flex;
+
+}
+
+.users-box{
+    
+    background-color: white;
+    width: 30%;
+}
+
+.chat-box{
+   
+    background-color: coral;
+    width: 70%;
+}
+
+/*user-box*/
+.user{
+    height: 100%;
+}
+
+.user img{
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.inline{
+    vertical-align: 120%;
+}
+
+.icons{
+    color: gray;
+    padding: 10px;
+}
+
+.icons i{
+    margin-left: 10px;
+}
+
+/*notify-box*/
+.notify-box{
+    height: 10%;
+    background-color: #81c9d6;
+}
+
+.bell{
+    background-color: white;
+    color:#81c9d6 ;
+    border-radius: 50%;
+    height: 100%;
+    vertical-align: ;
+}
+
+.notify-box a{
+    font-size: 12px;
+    color: gray;
+}
+
+/*search-box*/
+.search-box{
+    padding: 5px;
+}
+
+.input-text{
+    border: 1px solid gray;
+    padding: 6px;
+    width: 100%;
+}
+
+/*box-list*/
+.user-list{
+    list-style-type: none;
+}

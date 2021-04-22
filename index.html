@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="root">
+        <!--wrapper-->
+        <div class="wrapper">
+
+            <div class="wrapper-top"></div>
+            
+        </div>
+        <!--fine wrapper-->
+
+        <!--container-->
+        <div class="container">
+
+            <!--users-box-->
+            <div class="users-box ">
+
+                <!--title-box-->
+                <div class="title-box">
+
+                    <!--user-->
+                    <div class="user">
+                        <img src="img/avatar_io.jpg" alt="io">
+                        <span class="inline">Nome utente</span>
+                    </div>
+
+                    <!--icons-->
+                    <div class="icons">
+                        <span >
+                            <i class="fas fa-circle-notch"></i>
+                        </span>
+
+                        <span>
+                            <i class="fas fa-comment-alt"></i>
+                        </span>
+
+                        <span >
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                    </div>
+
+                    
+                </div>
+
+                <!--notify-box-->
+                <div class="notify-box">
+
+                    <span class="bell">
+                        <i class="fas fa-bell-slash"></i>
+                    </span>
+
+                    <span>
+                        Ricevi notifiche di nuovi messaggi <br>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </span>
+
+                </div>
+
+                <!--search-->
+                <div class="search-box">
+                    <input class="input-text" type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+
+                <!--users-list-->
+                <div class="box-list">
+                    <ul class="user-list">
+                        <li v-for="(contact, index) in contacts ">
+                            <img src="" alt="">
+                            <span class="inline">{{contact.name}} </span>
+                        </li>
+                    </ul>
+                </div>
+                
+
+            </div>
+            <!--fine users-box-->
+
+            <!--chat-box-->
+            <div class="chat-box ">
+
+                <div class="title-box">
+                    
+                </div>
+
+            </div>
+            <!--fine chat-box-->
+
+        </div>
+        <!--fine container-->
+        
+    </div>
+    
+
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
