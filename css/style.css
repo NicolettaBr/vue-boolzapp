@@ -57,7 +57,7 @@ img{
     width: 70%;
 }
 
-/*user-box*/
+/*USER BOX*/
 .user{
     height: 100%;
 }
@@ -116,6 +116,7 @@ img{
 
 .user-list li{
     height: 60px;
+    cursor: pointer;
 }
 
 .user-list img{
@@ -123,4 +124,46 @@ img{
     border-radius: 50%;
     padding: 5px;
 
+}
+
+/*CHAT BOX*/
+
+.chat-box{
+    position: relative;
+}
+
+.boxes{
+    padding: 10px 5px;
+    margin: 10px 60px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 14px;
+
+}
+
+.white{
+    background-color: white;
+    display: block;
+}
+
+.green{
+    background-color: #87f5a2;
+    float: right;
+    
+}
+
+.text-area{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(230, 228, 228);
+    padding: 5px;
+}
+
+.input-chat{
+    width: 80%;
+    height: 100%;
+    border: 1px solid gray;
 }

@@ -23,7 +23,7 @@
         <!--container-->
         <div class="container">
 
-            <!--users-box-->
+            <!--USER-BOX-->
             <div class="users-box ">
 
                 <!--title-box-->
@@ -76,7 +76,7 @@
                 <!--users-list-->
                 <div class="box-list">
                     <ul class="user-list">
-                        <li v-for="(contact, index) in contacts ">
+                        <li @click="chooseUser(index)" v-for="(contact, index) in contacts ">
                             <img :src=contact.userImg alt="">
                             <span class="inline">{{contact.name}} </span>
                         </li>
@@ -87,7 +87,7 @@
             </div>
             <!--fine users-box-->
 
-            <!--chat-box-->
+            <!--CHAT-BOX-->
             <div class="chat-box ">
 
                 <!--title-box-->
@@ -96,8 +96,8 @@
                     <!--user-->
                     <div class="user">
 
-                        <img src="img/avatar_io.jpg" alt="io">
-                        <span class="inline">Nicoletta</span> 
+                        <img :src=currentUserImg alt="">
+                        <span class="inline">{{currentName}}</span> 
                         
                     </div>
 
@@ -119,6 +119,25 @@
                     
                 </div>
                 <!--fine title-box-->
+
+                <div class="chat">
+                    <div class="white boxes"></div>
+
+                    <div class="green boxes">green</div>
+                </div>
+
+                <div class="text-area">
+                    <span class="icons">
+                        <i class="far fa-smile"></i>
+                    </span>
+                    
+                    <input class="input-chat" type="text" placeholder="Scrivi un messaggio">
+
+                    <span class="icons">
+                        <i class="fas fa-microphone"></i>
+                    </span>
+                    
+                </div>
 
             </div>
             <!--fine chat-box-->

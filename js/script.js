@@ -3,6 +3,9 @@ var app = new Vue (
         el: '#root',
 
         data:{
+            currentName:'',
+            currentUserImg: '',
+
             //array di contatti
              contacts: [
                 {   
@@ -101,6 +104,14 @@ var app = new Vue (
         },
 
         methods:{
+            chooseUser(index){
+                console.log(index);
+                
+                const indexCurrent = this.contacts[index] ;
+                this.currentName = this.contacts[index].name;
+                this.currentUserImg = this.contacts[index].userImg;
+                
+            }
 
         }
     }
