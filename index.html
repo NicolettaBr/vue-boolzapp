@@ -76,7 +76,7 @@
                 <!--users-list-->
                 <div class="box-list">
                     <ul class="user-list">
-                        <li @click="chooseUser(index)" v-for="(contact, index) in contacts ">
+                        <li @click="chooseUser(index)" v-for="(contact, index) in contacts">
                             <img :src=contact.userImg alt="">
                             <span class="inline">{{contact.name}} </span>
                         </li>
@@ -88,7 +88,7 @@
             <!--fine users-box-->
 
             <!--CHAT-BOX-->
-            <div class="chat-box ">
+            <div class="chat-box "> 
 
                 <!--title-box-->
                 <div class="title-box">
@@ -121,11 +121,15 @@
                 <!--fine title-box-->
 
                 <div class="chat">
-                    <!--white boxes-->
-                    <div class="white boxes">{{currentMessage}} </div>
 
-                     <!--green boxes-->
-                    <div class="green boxes">{{userMessage}} </div>
+                    <!--boxes-->
+
+                    <div class="boxes message" v-for="(message,index) in contacts[currentUser].messages" :class="message.status" >
+                        <div class="message-text">{{message.text}} </div>
+                        <div class="message-data">{{message.date}}</div>
+                    </div>
+
+                
                 </div>
 
                 <div class="text-area">
@@ -155,3 +159,4 @@
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
+

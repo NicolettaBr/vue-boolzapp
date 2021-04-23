@@ -3,6 +3,7 @@ var app = new Vue (
         el: '#root',
 
         data:{
+            currentUser:0,
             userText: '',
             userMessage: '',
             currentName:'',

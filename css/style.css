@@ -53,7 +53,7 @@ img{
 }
 
 .chat-box{
-    background-color: coral;
+    background-image: url(../img/mine.jpg);
     width: 70%;
 }
 
@@ -126,6 +126,11 @@ img{
 
 }
 
+.user-list li:hover{
+    background-color: lightgray;
+}
+
+
 /*CHAT BOX*/
 
 .chat-box{
@@ -136,20 +141,30 @@ img{
     padding: 10px 5px;
     margin: 10px 60px;
     width: 200px;
-    border-radius: 10px;
+    height: 50px;
+    border-radius: 5px;
     font-size: 14px;
-
+    clear: both;
+    position: relative;
 }
 
-.white{
-    background-color: white;
-    display: block;
-}
-
-.green{
-    background-color: #87f5a2;
+ .sent{
+    background-color: rgb(144, 212, 144);
     float: right;
-    
+}
+
+ .received{
+    background-color: white;
+    float: left;
+}
+
+.message-data{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding-top: 5px;
+    font-size: 10px;
+    color: gray;
 }
 
 .text-area{
