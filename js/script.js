@@ -3,8 +3,10 @@ var app = new Vue (
         el: '#root',
 
         data:{
+            //indice 
             currentUser:0,
             userText: '',
+            
             
             //array di contatti
              contacts: [
@@ -14,7 +16,7 @@ var app = new Vue (
                     avatar: '_1',
                     visible: true,
                     userImg: 'img/avatar_1.jpg', 
-                
+                    
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -38,7 +40,7 @@ var app = new Vue (
                     avatar: '_2',
                     visible: true,
                     userImg: 'img/avatar_2.jpg', 
-
+                    
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
@@ -62,7 +64,7 @@ var app = new Vue (
                     avatar: '_3',
                     visible: true,
                     userImg: 'img/avatar_3.jpg', 
-
+                    
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
@@ -86,7 +88,7 @@ var app = new Vue (
                     avatar: '_4',
                     visible: true,
                     userImg: 'img/avatar_6.jpg', 
-
+                    
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -97,7 +99,8 @@ var app = new Vue (
                             date: '10/01/2020 15:50:00',
                             text: 'Si, ma preferirei andare al cinema',
                             status: 'received'
-                        }
+                        },
+                        
                     ],
                 },
             ]
@@ -105,16 +108,21 @@ var app = new Vue (
 
         methods:{
             chooseUser(index){
-            
+        
                 this.currentUser = index;
-
             },
 
             addText(){
-                this.userText.push(userMessage);
-                //non deve essere un array no push
-                
-            }
+               
+                let newObject = {
+                    date: '3485',
+                    text: 'userText',
+                    status: 'sent',
+                }
+
+                this.contacts[currentUser].messages.push(this.newObject);
+               
+            },
 
         }
     }

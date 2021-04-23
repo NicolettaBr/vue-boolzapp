@@ -125,8 +125,10 @@
                     <!--boxes-->
 
                     <div class="boxes message" v-for="(message,index) in contacts[currentUser].messages" :class="message.status" >
-                        <div class="message-text">{{message.text}} </div>
+                        
+                        <div class="message-text">{{message.text}}</div>
                         <div class="message-data">{{message.date}}</div>
+                        
                     </div>
 
                 
@@ -138,7 +140,7 @@
                     </span>
                     
                     <input @keyup.enter="addText" v-model="userText" class="input-chat" type="text" placeholder="Scrivi un messaggio">
-
+                    
                     <span class="icons">
                         <i class="fas fa-microphone"></i>
                     </span>
