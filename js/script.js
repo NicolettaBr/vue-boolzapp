@@ -116,12 +116,15 @@ var app = new Vue (
                
                 let newObject = {
                     date: '3485',
-                    text: 'userText',
-                    status: 'sent',
+                    text: this.userText,
+                    status: 'sent'
                 }
 
-                this.contacts[currentUser].messages.push(this.newObject);
-               
+                if(this.userText.length > 0){
+                    this.contacts[this.currentUser].messages.push(newObject);
+                    this.userText = '';
+                }
+                
             },
 
         }
