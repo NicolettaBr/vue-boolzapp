@@ -7,6 +7,7 @@ var app = new Vue (
             currentUser:0,
             userText: '',
             userFilter:'',
+            activeMessage:false,
             
             
             //array di contatti
@@ -112,6 +113,7 @@ var app = new Vue (
             chooseUser(index){
         
                 this.currentUser = index;
+                this.activeMessage = false;
             },
 
             addText(){
@@ -165,8 +167,22 @@ var app = new Vue (
 
                     });
 
+                },
+                
+                toggleMenu(msgIndex){
+                    //console.log(msgIndex);
+                    if(this.activeMessage === msgIndex){
+                        this.activeMessage = false;
+                    }else{
+                        this.activeMessage = msgIndex;
+                    }
+                },
 
-
+                deleteMessage(msgIndex){
+                    //console.log(msgIndex);
+                    this.contacts[this.currentUser].messages.splice(msgIndex, 1);
+                    this.activeMessage=false;
+                    
                 }
                 
 

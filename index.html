@@ -138,6 +138,17 @@
 
                     <div class="boxes message" v-for="(message,index) in contacts[currentUser].messages" :class="message.status" >
                         
+                        <div @click="toggleMenu(index)" class="chevron-menu">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+
+                        <div v-if="index === activeMessage" class="options-menu">
+                            <ul>
+                                <li>Info Messaggio</li>
+                                <li @click="deleteMessage(index)" >Cancella Messaggio</li>
+                            </ul>
+                        </div>
+
                         <div class="message-text">{{message.text}}</div>
                         <div class="message-data">{{message.date}}</div>
                         
