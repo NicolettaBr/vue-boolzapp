@@ -6,6 +6,7 @@ var app = new Vue (
             //indice 
             currentUser:0,
             userText: '',
+            userFilter:'',
             
             
             //array di contatti
@@ -107,6 +108,7 @@ var app = new Vue (
         },
 
         methods:{
+
             chooseUser(index){
         
                 this.currentUser = index;
@@ -115,7 +117,7 @@ var app = new Vue (
             addText(){
                
                 let newObject = {
-                    date: '3485',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     text: this.userText,
                     status: 'sent'
                 }
@@ -125,7 +127,48 @@ var app = new Vue (
                     this.userText = '';
                 }
                 
+                //creo un nuovo oggetto da pushare nell' array ma che va stampato dopo 2 secondi
+                setTimeout(()=>{
+                    let newAnswerObj = {
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                        text: 'ok',
+                        status: 'received'
+                    }
+
+                    this.contacts[this.currentUser].messages.push(newAnswerObj);
+
+                }, 2000);
+            
             },
+
+                //funzione per filtrare utenti dalla lista
+                filterContacts(){    
+                    //console.log(this.userFilter);
+
+                    //trasformo userFilter in Lowercase
+                    const userFilterLowercase = this.userFilter.toLowerCase();
+                    //console.log(userFilterLowercase);
+
+
+                    //itero contacts e trasformo i valori di name in lowercase
+                    this.contacts.forEach ((contact) => {
+                        //console.log(contact);
+                        const contactNameLowercase = contact.name.toLowerCase();
+                        //console.log(contactNameLowercase);
+
+                        //verifico se valore di name include valore della input minuscolo(userFilterLowercase)
+                        if(contactNameLowercase.includes(userFilterLowercase)){
+                            contact.visible = true;
+                        }else{
+                            contact.visible = false;
+                        }
+
+                    });
+
+
+
+                }
+                
 
         }
     }

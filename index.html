@@ -70,15 +70,27 @@
 
                 <!--search-->
                 <div class="search-box">
-                    <input class="input-text" type="text" placeholder="Cerca o inizia una nuova chat">
+
+                    <input 
+                    v-model="userFilter" 
+                    @keyup = "filterContacts"
+                    class="input-text" 
+                    type="text" 
+                    placeholder="Cerca o inizia una nuova chat">
+
                 </div>
 
                 <!--users-list-->
                 <div class="box-list">
                     <ul class="user-list">
-                        <li @click="chooseUser(index)" v-for="(contact, index) in contacts">
+                        <li 
+                        v-if="contact.visible"
+                        @click="chooseUser(index)" 
+                        v-for="(contact, index) in contacts">
+
                             <img :src=contact.userImg alt="">
                             <span class="inline">{{contact.name}} </span>
+
                         </li>
                     </ul>
                 </div>
@@ -157,7 +169,7 @@
     
 
 
-
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
